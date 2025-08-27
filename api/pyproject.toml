@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "google-contest-api"
+version = "0.0.1"
+description = ""
+authors = [
+    "thinhsuy <ndthinh0201@gmail.com>"
+]
+readme = "README.md"
+packages = [{include = "core"}]
+
+[tool.poetry.dependencies]
+python = "^3.11.0"
+fastapi = "^0.109.0"
+uvicorn = {extras = ["standard"], version = "^0.30.6"}
+pydantic = "2.5.3"
+python-dotenv = "^1.1.1"
+rich = "^14.1.0"

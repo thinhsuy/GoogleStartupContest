@@ -1,0 +1,13 @@
+.git
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+api/tests/
+docs/
+.env
+*.log
+*.sqlite
+*.db
+node_modules/
+*.ipynb
