@@ -14,7 +14,7 @@ BASE_DIR = Path(__file__).parent.parent.absolute()
 LOGS_DIR = Path(BASE_DIR, "logs")
 LOGS_DIR.mkdir(parents=True, exist_ok=True)
 PACKAGE_DIR = Path(BASE_DIR, "core")
-
+STORE_DIR = Path(PACKAGE_DIR, "store")
 
 logging_config = {
     "version": 1,

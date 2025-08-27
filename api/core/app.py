@@ -1,6 +1,7 @@
 from starlette.middleware.cors import CORSMiddleware
 from fastapi import FastAPI
 from contextlib import asynccontextmanager
+from core.routers.websocket_server import router as WebsocketRouter
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -29,6 +30,12 @@ async def read_root():
     return {
         "message": "Develop a comprehensive AIAIVN Voice Service Server API system that tracks and manages user actions across different applications. This system should be designed to handle high-volume logging, provide search and filtering capabilities, and ensure data integrity and security."
     }
+
+app.include_router(
+    WebsocketRouter,
+    tags=["WebSocket Route"],
+    prefix="/ws/v1/translate"
+)
 
 
 app.add_middleware(
